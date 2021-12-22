@@ -1,20 +1,19 @@
 import React from "react"
 import { Container, Flex } from "../styles/globalStyles"
-import { HeaderNav } from "../styles/headerStyles"
+import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 
 const Header = () => {
   return (
     <HeaderNav>
       <Container>
-        <Flex>
-          header
-          {/* <Logo>lishu</Logo>
+        <Flex spaceBetween noHeight>
+          <Logo>lishu</Logo>
           <Menu>
             <button>
               <span></span>
               <span></span>
             </button>
-          </Menu> */}
+          </Menu>
         </Flex>
       </Container>
     </HeaderNav>
