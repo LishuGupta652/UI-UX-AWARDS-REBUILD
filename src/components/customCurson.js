@@ -22,7 +22,9 @@ const CustomCursor = () => {
 
   return (
     <>
-      <Cursor />
+      <Cursor
+        style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
+      />
     </>
   )
 }
