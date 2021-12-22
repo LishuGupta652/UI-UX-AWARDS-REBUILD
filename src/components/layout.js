@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 ${Normalize}
   * {
     text-decoration: none;
-    curson: none;
+    cursor: none;
   }
 
   html {
