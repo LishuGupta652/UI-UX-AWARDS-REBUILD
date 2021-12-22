@@ -53,4 +53,13 @@ export const Flex = styled.div`
     `};
 `
 
-export const Cursor = styled.div``
+export const Cursor = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background: ${props => props.theme.red};
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+`

@@ -1,7 +1,12 @@
 import React from "react"
+import { Cursor } from "../styles/globalStyles"
 
 const CustomCursor = () => {
-  return <></>
+  return (
+    <>
+      <Cursor />
+    </>
+  )
 }
 
 export default CustomCursor
