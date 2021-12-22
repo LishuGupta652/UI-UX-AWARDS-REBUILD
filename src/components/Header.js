@@ -24,7 +24,10 @@ const Header = ({ onCursor }) => {
     <HeaderNav animate={{ y: 0, opacity: 1 }} initial={{ y: -72, opacity: 0 }}>
       <Container>
         <Flex spaceBetween noHeight>
-          <Logo>
+          <Logo
+            onMouseEnter={() => onCursor("hovered")}
+            onMouseLeave={onCursor}
+          >
             <Link to="/">GITM</Link>
             <span onClick={toggleTheme}></span>
             <Link to="/">N</Link>

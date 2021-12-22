@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { Normalize } from "styled-normalize"
 import Header from "./Header"
-import { useGlobalState } from "../context/globalContext"
+import { useGlobalDispatch, useGlobalState } from "../context/globalContext"
 import CustomCursor from "./customCurson"
 
 const GlobalStyle = createGlobalStyle`
@@ -52,10 +52,10 @@ const Layout = ({ children }) => {
     red: "#ea291e",
   }
 
-  const { currentTheme, currentStyle } = useGlobalState()
-
+  const { currentTheme, cursorStyles } = useGlobalState()
+  const dispatch = useGlobalDispatch()
   const onCursor = cursorType => {
-    cursorType = (cursorStyle.includes(cursorType) && cursorType) || "false"
+    cursorType = (cursorStyles.includes(cursorType) && cursorType) || "false"
 
     dispatch({ type: "CURSOR_TYPE", cursorType })
   }
