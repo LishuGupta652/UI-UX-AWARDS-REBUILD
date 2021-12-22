@@ -25,7 +25,7 @@ const CustomCursor = () => {
   return (
     <>
       <Cursor
-        className={`${!!cursorType ? "hovered" : ""}`}
+        className={`${!!cursorType ? "hovered" : ""} ${cursorType}`}
         style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
       />
     </>
