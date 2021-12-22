@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useEffect } from "react"
 import { Container, Flex } from "../styles/globalStyles"
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 // Context
@@ -15,6 +15,11 @@ const Header = () => {
       dispatch({ type: "TOGGLE_THEME", theme: "dark" })
     }
   }
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", currentTheme)
+  }, [currentTheme])
+
   return (
     <HeaderNav>
       <Container>
