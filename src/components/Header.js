@@ -29,7 +29,11 @@ const Header = ({ onCursor }) => {
             onMouseLeave={onCursor}
           >
             <Link to="/">GITM</Link>
-            <span onClick={toggleTheme}></span>
+            <span
+              onMouseEnter={() => onCursor("pointer")}
+              onMouseLeave={onCursor}
+              onClick={toggleTheme}
+            ></span>
             <Link to="/">N</Link>
           </Logo>
           <Menu>
