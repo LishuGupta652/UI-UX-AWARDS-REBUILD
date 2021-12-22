@@ -21,7 +21,7 @@ ${Normalize}
   }
 
   body{
-    font-family: Roboto,sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background:  ${props => props.theme.background};
     overscroll-behavior: none;
     overflow-x: none;
