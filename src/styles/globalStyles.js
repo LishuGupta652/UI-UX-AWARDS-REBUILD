@@ -52,3 +52,5 @@ export const Flex = styled.div`
       height: 0;
     `};
 `
+
+export const Cursor = styled.div``
