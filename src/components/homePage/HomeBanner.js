@@ -23,6 +23,8 @@ const HomeBanner = () => {
     let moving = false
 
     renderingCtx.globalCompositeOperation = "source-over"
+    renderingCtx.fillStyle = "#000"
+    renderingCtx.fillRect(0, 0, 100, 100)
   }, [])
 
   return (
