@@ -21,7 +21,7 @@ ${Normalize}
 
   body{
     font-family: Roboto,sans-serif;
-    background:  #fff;
+    background:  ${props => props.theme.background};
     overscroll-behavior: none;
     overflow-x: none;
   }
