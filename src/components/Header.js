@@ -34,7 +34,13 @@ const Header = ({ onCursor }) => {
               onMouseLeave={onCursor}
               onClick={toggleTheme}
             ></span>
-            <Link to="/">N</Link>
+            <Link
+              to="/"
+              onMouseEnter={() => onCursor("hovered")}
+              onMouseLeave={onCursor}
+            >
+              N
+            </Link>
           </Logo>
           <Menu>
             <button>
