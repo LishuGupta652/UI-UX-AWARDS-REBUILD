@@ -14,7 +14,7 @@ import { useGlobalState } from "../../context/globalContext"
 const HomeBanner = () => {
   const canvas = useRef(null)
   const size = useWindowSize()
-  const { currentTheme } = useContext(useGlobalState)
+  const { currentTheme } = useGlobalState()
 
   console.log(size)
   useEffect(() => {
