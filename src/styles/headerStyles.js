@@ -27,4 +27,19 @@ export const Logo = styled.nav`
     bottom: 2px;
   }
 `
-export const Menu = styled.nav``
+export const Menu = styled.nav`
+  button {
+    tranform-origin: center;
+    border: none;
+    padding: 20px;
+    background: none;
+    outline: none;
+    span {
+      width: 36px;
+      height: 6px;
+      display: block;
+      background: ${props => props.theme.text};
+      margin: 8px;
+    }
+  }
+`
