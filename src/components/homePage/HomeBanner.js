@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import {
   Banner,
   BannerTitle,
@@ -8,6 +8,23 @@ import {
 } from "../../styles/homeStyles"
 
 const HomeBanner = () => {
+  const canvas = useRef(null)
+
+  useEffect(() => {
+    let renderingElement = canvas.current
+    let drawingElement = renderingElement.cloneNode()
+
+    let renderingCtx = renderingElement.getContext("2d")
+    let drawingCtx = drawingElement.getContext("2d")
+
+    let lastX
+    let lastY
+
+    let moving = false
+
+    renderingCtx.globalCompositeOperation = "source-over"
+  }, [])
+
   return (
     <Banner>
       <Video>
