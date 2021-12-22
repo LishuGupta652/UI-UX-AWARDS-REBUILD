@@ -31,3 +31,9 @@ export const BannerTitle = styled.h1`
   color: ${props => props.theme.text};
   pointer-events: none;
 `
+export const Headline = styled.span`
+  display: block;
+  font-size: 23rem;
+  font-weight: 900;
+  line-height: 0.76;
+`

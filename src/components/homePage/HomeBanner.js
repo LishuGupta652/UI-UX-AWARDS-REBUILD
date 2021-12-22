@@ -16,10 +16,10 @@ const HomeBanner = () => {
         </video>
       </Video>
       <Canvas />
-      {/* <BannerTitle>
+      <BannerTitle>
         <Headline>DIG</Headline>
         <Headline>DEEP</Headline>
-      </BannerTitle> */}
+      </BannerTitle>
     </Banner>
   )
 }
