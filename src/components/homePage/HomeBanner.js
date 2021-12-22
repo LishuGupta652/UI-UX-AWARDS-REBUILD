@@ -38,7 +38,7 @@ const HomeBanner = () => {
           autoPlay
         />
       </Video>
-      <Canvas />
+      <Canvas ref={canvas} />
       <BannerTitle>
         <Headline>DIG</Headline>
         <Headline>DEEP</Headline>
