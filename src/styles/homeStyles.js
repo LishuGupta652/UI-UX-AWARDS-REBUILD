@@ -26,7 +26,7 @@ export const Canvas = styled.div`
 `
 export const BannerTitle = styled.h1`
   position: absolute;
-  bottom: -120px
+  bottom: -120px;
   left: -18px;
   color: ${props => props.theme.text};
   pointer-events: none;

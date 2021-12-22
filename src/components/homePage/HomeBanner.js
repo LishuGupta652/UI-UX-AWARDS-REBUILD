@@ -1,5 +1,11 @@
 import React from "react"
-import { Banner, Video } from "../../styles/homeStyles"
+import {
+  Banner,
+  BannerTitle,
+  Canvas,
+  Headline,
+  Video,
+} from "../../styles/homeStyles"
 
 const HomeBanner = () => {
   return (
@@ -11,9 +17,7 @@ const HomeBanner = () => {
           width="100%"
           loop
           autoPlay
-        >
-          {" "}
-        </video>
+        />
       </Video>
       <Canvas />
       <BannerTitle>
