@@ -52,13 +52,19 @@ const Layout = ({ children }) => {
     red: "#ea291e",
   }
 
-  const { currentTheme } = useGlobalState()
+  const { currentTheme, currentStyle } = useGlobalState()
+
+  const onCursor = cursorType => {
+    cursorType = (cursorStyle.includes(cursorType) && cursorType) || "false"
+
+    dispatch({ type: "CURSOR_TYPE", cursorType })
+  }
 
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyle />
       <CustomCursor />
-      <Header />
+      <Header onCursor={onCursor} />
       <main>{children}</main>
     </ThemeProvider>
   )

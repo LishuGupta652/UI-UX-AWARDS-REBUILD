@@ -5,7 +5,7 @@ import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 // Context
 import { useGlobalState, useGlobalDispatch } from "../context/globalContext"
 
-const Header = () => {
+const Header = ({ onCursor }) => {
   const dispatch = useGlobalDispatch()
   const { currentTheme } = useGlobalState()
   const toggleTheme = () => {
