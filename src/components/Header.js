@@ -1,4 +1,5 @@
 import React from "react"
+import { Container, Flex } from "../styles/globalStyles"
 import { HeaderNav } from "../styles/headerStyles"
 
 const Header = () => {
@@ -6,13 +7,14 @@ const Header = () => {
     <HeaderNav>
       <Container>
         <Flex>
-          <Logo>lishu</Logo>
+          header
+          {/* <Logo>lishu</Logo>
           <Menu>
             <button>
               <span></span>
               <span></span>
             </button>
-          </Menu>
+          </Menu> */}
         </Flex>
       </Container>
     </HeaderNav>
