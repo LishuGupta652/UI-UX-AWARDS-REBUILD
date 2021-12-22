@@ -7,9 +7,14 @@ import {
   Video,
 } from "../../styles/homeStyles"
 
+// Custom hooks
+import useWindowSize from "../../hooks/useWindowSize"
+
 const HomeBanner = () => {
   const canvas = useRef(null)
+  const size = useWindowSize()
 
+  console.log(size)
   useEffect(() => {
     let renderingElement = canvas.current
     let drawingElement = renderingElement.cloneNode()
@@ -24,7 +29,7 @@ const HomeBanner = () => {
 
     renderingCtx.globalCompositeOperation = "source-over"
     renderingCtx.fillStyle = "#000"
-    renderingCtx.fillRect(0, 0, 100, 100)
+    renderingCtx.fillRect(0, 0, size.width, size.height)
   }, [])
 
   return (
@@ -38,7 +43,7 @@ const HomeBanner = () => {
           autoPlay
         />
       </Video>
-      <Canvas ref={canvas} />
+      <Canvas ref={canvas} height={size.height} width={size.width} />
       <BannerTitle>
         <Headline>DIG</Headline>
         <Headline>DEEP</Headline>
