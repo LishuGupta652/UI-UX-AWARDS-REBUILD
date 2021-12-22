@@ -62,4 +62,9 @@ export const Cursor = styled.div`
   background: ${props => props.theme.red};
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.1s ease-in-out;
+  transition-property: width, height, border;
+  will-change: width, height, border, transform;
+  pointer-events: none;
+  z-index: 999;
 `
