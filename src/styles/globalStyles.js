@@ -67,6 +67,7 @@ export const Cursor = styled.div`
   will-change: width, height, border, transform;
   pointer-events: none;
   z-index: 999;
+
   &.pointer {
     border: 4px solid ${props => props.theme.text} !important;
     background: transparent !important;
