@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Container = styled.div`
   flex-grow: 1;
@@ -25,4 +25,30 @@ export const Container = styled.div`
     margin: 0;
     max-width: 100%;
   `}
+`
+
+export const Flex = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  ${props =>
+    props.spaceBetween &&
+    css`
+      justify-content: space-between;
+    `};
+  ${props =>
+    props.flexEnd &&
+    css`
+      justify-content: flex-end;
+    `};
+  ${props =>
+    props.alignTop &&
+    css`
+      align-items: flex-start;
+    `};
+  ${props =>
+    props.noHeight &&
+    css`
+      height: 0;
+    `};
 `
