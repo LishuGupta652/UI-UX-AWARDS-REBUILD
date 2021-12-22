@@ -9,4 +9,25 @@ export const Banner = styled.div`
   position: relative;
   margin-bottom: 296px;
 `
-export const Video = styled.div``
+export const Video = styled.div`
+  height: 100%;
+  width: 100%;
+  video {
+    object-fit: cover;
+  }
+`
+
+export const Canvas = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: block;
+`
+export const BannerTitle = styled.h1`
+  position: absolute;
+  bottom: -120px
+  left: -18px;
+  color: ${props => props.theme.text};
+  pointer-events: none;
+`
