@@ -19,3 +19,17 @@ const globalReducer = (state, action) => {
     }
   }
 }
+
+export const GlobalProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(globalReducer, {
+    currentTheme: "dark",
+  })
+
+  return (
+    <GlobalDispatchContext.Provider value={dispatch}>
+      <GlobalStateContext.Provider value={state}>
+        {children}
+      </GlobalStateContext.Provider>
+    </GlobalDispatchContext.Provider>
+  )
+}
