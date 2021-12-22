@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 /// Styled Components
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { Normalize } from "styled-normalize"
 
 const GlobalStyle = createGlobalStyle`
@@ -38,11 +38,20 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const darkTheme = {
+    background: "#000",
+    text: "#fff",
+  }
+  const lightTheme = {
+    background: "#fff",
+    text: "#000",
+  }
+
   return (
-    <>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <main>{children}</main>
-    </>
+    </ThemeProvider>
   )
 }
 
