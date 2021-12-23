@@ -107,9 +107,9 @@ const HomeBanner = ({ onCursor }) => {
         onMouseLeave={onCursor}
         onMouseEnter={() => onCursor("hovered")}
       />
-      <BannerTitle>
-        <Headline>DIG</Headline>
-        <Headline>DEEP</Headline>
+      <BannerTitle variants={parent} initial="initial" animate="animate">
+        <Headline variants={child}>DIG</Headline>
+        <Headline variants={child}>DEEP</Headline>
       </BannerTitle>
     </Banner>
   )

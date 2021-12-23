@@ -21,7 +21,11 @@ const Header = ({ onCursor }) => {
   }, [currentTheme])
 
   return (
-    <HeaderNav animate={{ y: 0, opacity: 1 }} initial={{ y: -72, opacity: 0 }}>
+    <HeaderNav
+      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -72, opacity: 0 }}
+      transition={{ delay: 0.8 }}
+    >
       <Container>
         <Flex spaceBetween noHeight>
           <Logo
