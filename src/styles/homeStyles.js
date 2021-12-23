@@ -24,14 +24,14 @@ export const Canvas = styled.canvas`
   height: 100%;
   display: block;
 `
-export const BannerTitle = styled.h1`
+export const BannerTitle = styled(motion.h1)`
   position: absolute;
   bottom: -120px;
   left: -18px;
   color: ${props => props.theme.text};
   pointer-events: none;
 `
-export const Headline = styled.span`
+export const Headline = styled(motion.span)`
   display: block;
   font-size: 23rem;
   font-weight: 900;

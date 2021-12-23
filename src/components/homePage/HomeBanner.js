@@ -11,7 +11,7 @@ import {
 import useWindowSize from "../../hooks/useWindowSize"
 import { useGlobalState } from "../../context/globalContext"
 
-const HomeBanner = () => {
+const HomeBanner = ({ onCursor }) => {
   const canvas = useRef(null)
   const size = useWindowSize()
   const { currentTheme } = useGlobalState()
@@ -68,6 +68,27 @@ const HomeBanner = () => {
     })
   }, [currentTheme])
 
+  const parent = {
+    initial: { y: 800 },
+    animate: {
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const child = {
+    initial: { y: 800 },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  }
+
   return (
     <Banner>
       <Video>
@@ -79,7 +100,13 @@ const HomeBanner = () => {
           autoPlay
         />
       </Video>
-      <Canvas ref={canvas} height={size.height} width={size.width} />
+      <Canvas
+        ref={canvas}
+        height={size.height}
+        width={size.width}
+        onMouseLeave={onCursor}
+        onMouseEnter={() => onCursor("hovered")}
+      />
       <BannerTitle>
         <Headline>DIG</Headline>
         <Headline>DEEP</Headline>
