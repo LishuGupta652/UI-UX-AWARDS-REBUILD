@@ -31,30 +31,30 @@ const HomeBanner = () => {
     renderingCtx.fillStyle = currentTheme === "dark" ? "#000000" : "#ffffff"
     renderingCtx.fillRect(0, 0, size.width, size.height)
 
-    renderingElement.addEventListener("mouseover", ev => {
+    renderingElement.addEventListener("mouseover", el => {
       moving = true
-      lastX = ev.pageX - renderingElement.offsetLeft
-      lastY = ev.pageY - renderingElement.offsetTop
+      lastX = el.pageX - renderingElement.offsetLeft
+      lastY = el.pageY - renderingElement.offsetTop
     })
 
-    renderingElement.addEventListener("click", ev => {
+    renderingElement.addEventListener("click", el => {
       moving = true
-      lastX = ev.pageX - renderingElement.offsetLeft
-      lastY = ev.pageY - renderingElement.offsetTop
+      lastX = el.pageX - renderingElement.offsetLeft
+      lastY = el.pageY - renderingElement.offsetTop
     })
 
-    renderingElement.addEventListener("mouseup", ev => {
+    renderingElement.addEventListener("mouseup", el => {
       moving = false
-      lastX = ev.pageX - renderingElement.offsetLeft
-      lastY = ev.pageY - renderingElement.offsetTop
+      lastX = el.pageX - renderingElement.offsetLeft
+      lastY = el.pageY - renderingElement.offsetTop
     })
 
-    renderingElement.addEventListener("mousemove", ev => {
+    renderingElement.addEventListener("mousemove", el => {
       if (moving) {
         drawingCtx.globalCompositeOperation = "source-over"
         renderingCtx.globalCompositeOperation = "destination-out"
-        let currentX = ev.pageX - renderingElement.offsetLeft
-        let currentY = ev.pageY - renderingElement.offsetTop
+        let currentX = el.pageX - renderingElement.offsetLeft
+        let currentY = el.pageY - renderingElement.offsetTop
         drawingCtx.lineJoin = "round"
         drawingCtx.moveTo(lastX, lastY)
         drawingCtx.lineTo(currentX, currentY)
