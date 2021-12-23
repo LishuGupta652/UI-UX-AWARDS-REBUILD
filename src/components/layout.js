@@ -8,6 +8,7 @@ import { Normalize } from "styled-normalize"
 import Header from "./Header"
 import { useGlobalDispatch, useGlobalState } from "../context/globalContext"
 import CustomCursor from "./customCurson"
+import Navigation from "./navigation"
 
 const GlobalStyle = createGlobalStyle`
 ${Normalize}
@@ -65,6 +66,7 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <CustomCursor />
       <Header onCursor={onCursor} />
+      <Navigation />
       <main>{children}</main>
     </ThemeProvider>
   )
