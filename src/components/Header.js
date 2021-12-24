@@ -5,7 +5,7 @@ import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 // Context
 import { useGlobalState, useGlobalDispatch } from "../context/globalContext"
 
-const Header = ({ onCursor }) => {
+const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
   const dispatch = useGlobalDispatch()
   const { currentTheme } = useGlobalState()
   const toggleTheme = () => {
@@ -46,7 +46,7 @@ const Header = ({ onCursor }) => {
               N
             </Link>
           </Logo>
-          <Menu>
+          <Menu onClick={() => setToggleMenu(!toggleMenu)}>
             <button>
               <span></span>
               <span></span>
