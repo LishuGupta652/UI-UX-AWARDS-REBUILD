@@ -82,6 +82,13 @@ const Navigation = () => {
           </ul>
         </NavList>
         <NavFooter></NavFooter>
+        <NavVideos>
+          <div className="reveal">
+            <div className="video">
+              <video src=""></video>
+            </div>
+          </div>
+        </NavVideos>
       </Container>
     </Nav>
   )
