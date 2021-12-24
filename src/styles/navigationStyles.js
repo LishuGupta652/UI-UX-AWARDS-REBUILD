@@ -74,3 +74,34 @@ export const NavList = styled.div`
   }
 `
 export const NavFooter = styled.div``
+
+export const NavVideos = styled.div`
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 25%;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: #000;
+
+  .reveal {
+    width: 100%;
+    background: ${props => props.theme.red};
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .video {
+    background: #000;
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    video {
+      heigth: 100%;
+    }
+  }
+`

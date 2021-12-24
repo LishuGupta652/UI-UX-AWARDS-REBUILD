@@ -42,6 +42,11 @@ const navRoutes = [
   },
 ]
 const Navigation = () => {
+  const [revelVideo, setRevelVideo] = React.useState({
+    show: true,
+    video: "feature-video.mp4",
+    key: 0,
+  })
   return (
     <Nav>
       <Container>
@@ -85,7 +90,11 @@ const Navigation = () => {
         <NavVideos>
           <div className="reveal">
             <div className="video">
-              <video src=""></video>
+              <video
+                src={require(`../assets/video/${revealVideo.video}`)}
+                loop
+                autoPlay
+              ></video>
             </div>
           </div>
         </NavVideos>
