@@ -43,9 +43,9 @@ const navRoutes = [
   },
 ]
 const Navigation = () => {
-  const [revelVideo, setRevelVideo] = React.useState({
+  const [revealVideo, setRevealVideo] = React.useState({
     show: true,
-    video: "feature-video.mp4",
+    video: "featured-video.mp4",
     key: 0,
   })
   return (
