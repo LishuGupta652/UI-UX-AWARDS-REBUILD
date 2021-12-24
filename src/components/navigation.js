@@ -43,7 +43,7 @@ const navRoutes = [
     video: "50-beaches.mp4",
   },
 ]
-const Navigation = () => {
+const Navigation = ({ toggleMenu, setToggleMenu }) => {
   const [revealVideo, setRevealVideo] = React.useState({
     show: false,
     video: "featured-video.mp4",
