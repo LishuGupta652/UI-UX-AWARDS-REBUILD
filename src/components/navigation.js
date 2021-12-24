@@ -67,7 +67,7 @@ const Navigation = () => {
             {navRoutes.map(route => (
               <li key={route.id}>
                 <Link to={`/projects/${route.path}`}>
-                  <div className="link">
+                  <motion.div className="link">
                     <span className="arrow">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const Navigation = () => {
                       </svg>
                     </span>
                     {route.title}
-                  </div>
+                  </motion.div>
                 </Link>
               </li>
             ))}
