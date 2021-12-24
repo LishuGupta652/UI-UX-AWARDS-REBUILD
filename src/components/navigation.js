@@ -58,7 +58,7 @@ const Navigation = ({ toggleMenu, setToggleMenu }) => {
               <NavHeader>
                 <Flex spaceBetween noHeight>
                   <h2>Projects</h2>
-                  <CloseNav>
+                  <CloseNav onClick={() => setToggleMenu(!toggleMenu)}>
                     <button>
                       <span></span>
                       <span></span>
