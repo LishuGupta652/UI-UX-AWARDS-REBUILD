@@ -100,7 +100,10 @@ const Navigation = () => {
         </NavList>
         <NavFooter></NavFooter>
         <NavVideos>
-          <div className="reveal">
+          <motion.div
+            animate={{ width: revealVideo.show ? 0 : "100%" }}
+            className="reveal"
+          >
             <div className="video">
               <video
                 src={require(`../assets/video/${revealVideo.video}`)}
@@ -108,7 +111,7 @@ const Navigation = () => {
                 autoPlay
               />
             </div>
-          </div>
+          </motion.div>
         </NavVideos>
       </Container>
     </Nav>
