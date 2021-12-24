@@ -45,7 +45,7 @@ const navRoutes = [
 ]
 const Navigation = () => {
   const [revealVideo, setRevealVideo] = React.useState({
-    show: true,
+    show: false,
     video: "featured-video.mp4",
     key: 0,
   })
@@ -66,7 +66,23 @@ const Navigation = () => {
         <NavList>
           <ul>
             {navRoutes.map(route => (
-              <li key={route.id}>
+              <motion.li
+                key={route.id}
+                onHoverStart={() =>
+                  setRevealVideo({
+                    show: true,
+                    video: route.video,
+                    key: route.id,
+                  })
+                }
+                onHoverEnd={() =>
+                  setRevealVideo({
+                    show: false,
+                    video: route.video,
+                    key: route.id,
+                  })
+                }
+              >
                 <Link to={`/projects/${route.path}`}>
                   <motion.div
                     initial={{ x: -108 }}
@@ -94,7 +110,7 @@ const Navigation = () => {
                     {route.title}
                   </motion.div>
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </NavList>
