@@ -1,6 +1,7 @@
+import { motion } from "framer-motion"
 import styled from "styled-components"
 
-export const Nav = styled.div`
+export const Nav = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;

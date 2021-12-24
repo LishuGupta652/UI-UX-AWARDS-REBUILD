@@ -53,7 +53,11 @@ const Navigation = ({ toggleMenu, setToggleMenu }) => {
     <>
       <AnimatePresence>
         {toggleMenu && (
-          <Nav>
+          <Nav
+            initial={{ x: "-100%" }}
+            exit={{ x: "100%" }}
+            animate={{ x: toggleMenu ? 0 : "-100%" }}
+          >
             <Container>
               <NavHeader>
                 <Flex spaceBetween noHeight>
