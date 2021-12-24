@@ -7,6 +7,7 @@ import {
   NavFooter,
   NavHeader,
   NavList,
+  NavVideos,
 } from "../styles/navigationStyles"
 
 const navRoutes = [
