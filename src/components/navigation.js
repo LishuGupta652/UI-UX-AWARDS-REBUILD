@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { Link } from "gatsby"
 import React from "react"
 import { Container, Flex } from "../styles/globalStyles"
@@ -121,11 +121,18 @@ const Navigation = () => {
             className="reveal"
           >
             <div className="video">
-              <video
-                src={require(`../assets/video/${revealVideo.video}`)}
-                loop
-                autoPlay
-              />
+              <AnimatePresence initial={false} exitBeforeEnter>
+                <motion.video
+                  key={revealVideo.key}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  src={require(`../assets/video/${revealVideo.video}`)}
+                  loop
+                  autoPlay
+                />
+              </AnimatePresence>
             </div>
           </motion.div>
         </NavVideos>
