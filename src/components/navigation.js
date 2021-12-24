@@ -95,7 +95,7 @@ const Navigation = () => {
                 src={require(`../assets/video/${revealVideo.video}`)}
                 loop
                 autoPlay
-              ></video>
+              />
             </div>
           </div>
         </NavVideos>

@@ -16,7 +16,6 @@ const HomeBanner = ({ onCursor }) => {
   const size = useWindowSize()
   const { currentTheme } = useGlobalState()
 
-  console.log(size)
   useEffect(() => {
     let renderingElement = canvas.current
     // create an offscreen canvas only for the drawings

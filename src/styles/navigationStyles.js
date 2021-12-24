@@ -76,7 +76,7 @@ export const NavList = styled.div`
 export const NavFooter = styled.div``
 
 export const NavVideos = styled.div`
-  position: relative;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 25%;
@@ -84,10 +84,9 @@ export const NavVideos = styled.div`
   height: 100%;
   width: 100%;
   background: #000;
-
   .reveal {
     width: 100%;
-    background: ${props => props.theme.red};
+    background: #ea281e;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -101,7 +100,7 @@ export const NavVideos = styled.div`
     margin: 0;
     z-index: -1;
     video {
-      heigth: 100%;
+      height: 100%;
     }
   }
 `
