@@ -35,5 +35,42 @@ export const CloseNav = styled.div`
     }
   }
 `
-export const NavList = styled.div``
+export const NavList = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      height: 96px;
+      line-height: 96px;
+      overflow: hidden;
+
+      .link {
+        color: ${props => props.theme.background};
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .arrow {
+          height: 76px;
+          margin-right: 8px;
+
+          svg {
+            width: 100px;
+
+            path {
+              fill: ${props => props.theme.background};
+            }
+          }
+        }
+      }
+    }
+  }
+`
 export const NavFooter = styled.div``
