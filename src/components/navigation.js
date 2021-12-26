@@ -43,7 +43,7 @@ const navRoutes = [
     video: "50-beaches.mp4",
   },
 ]
-const Navigation = ({ toggleMenu, setToggleMenu }) => {
+const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
   const [revealVideo, setRevealVideo] = React.useState({
     show: false,
     video: "featured-video.mp4",
@@ -54,15 +54,20 @@ const Navigation = ({ toggleMenu, setToggleMenu }) => {
       <AnimatePresence>
         {toggleMenu && (
           <Nav
-            initial={{ x: "-100%" }}
-            exit={{ x: "100%" }}
-            animate={{ x: toggleMenu ? 0 : "-100%" }}
+            initial={{ x: "-100%", opacity: 0 }}
+            exit={{ x: "100%", opacity: 0 }}
+            animate={{ x: toggleMenu ? 0 : "-100%", opacity: 1 }}
+            transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
           >
             <Container>
               <NavHeader>
                 <Flex spaceBetween noHeight>
                   <h2>Projects</h2>
-                  <CloseNav onClick={() => setToggleMenu(!toggleMenu)}>
+                  <CloseNav
+                    onClick={() => setToggleMenu(!toggleMenu)}
+                    onMouseEnter={() => onCursor("pointer")}
+                    onMouseLeave={onCursor}
+                  >
                     <button>
                       <span></span>
                       <span></span>
