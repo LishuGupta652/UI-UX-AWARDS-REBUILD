@@ -1,5 +1,6 @@
 import React from "react"
 import { Container } from "../../styles/globalStyles"
+import { Content, HomeContentSection } from "../../styles/homeStyles"
 
 const HomeContent = () => {
   return (

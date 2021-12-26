@@ -40,4 +40,4 @@ export const Headline = styled(motion.span)`
 
 // homecontent
 export const HomeContentSection = styled.div``
-export const content = styled.h2``
+export const Content = styled.h2``
