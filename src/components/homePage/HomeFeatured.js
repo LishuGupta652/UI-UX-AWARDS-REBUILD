@@ -33,6 +33,8 @@ const HomeFeatured = ({ onCursor }) => {
               HUMBLE
               <span className="arrow">
                 <motion.svg
+                  animate={{ x: hovered ? 48 : 0 }}
+                  transition={{ duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 101 57"
                 >
