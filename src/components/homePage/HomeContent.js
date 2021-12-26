@@ -7,8 +7,7 @@ import { Content, HomeContentSection } from "../../styles/homeStyles"
 const HomeContent = () => {
   const animation = useAnimation()
   const [contentRef, inView] = useInView({
-    triggerOnce: true,
-    // rootMargin: "-300px",
+    rootMargin: "-300px",
   })
 
   useEffect(() => {
