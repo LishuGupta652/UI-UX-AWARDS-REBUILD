@@ -89,7 +89,7 @@ export const FeaturedContent = styled.div`
     line-height: 90px;
     margin: 0;
 
-    arrow {
+    .arrow {
       width: 120px;
       height: 80px;
       display: block;
@@ -101,6 +101,9 @@ export const FeaturedContent = styled.div`
         top: 16px;
         left: -48px;
         width: 108px;
+        path {
+          fill: ${props => props.theme.text};
+        }
       }
     }
   }
