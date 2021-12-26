@@ -117,4 +117,22 @@ export const FeaturedVideo = styled.div`
   display: block;
   overflow: hidden;
 `
-export const FeaturedProjects = styled.div``
+export const FeaturedProjects = styled.div`
+  margin-top: 200px;
+  button {
+    background: ${props => props.theme.red};
+    color: #fff;
+    position: relative;
+    padding: 20px;
+    display: block;
+    text-align: left;
+    line-height: 1;
+    font-weight: 600;
+    border: none;
+
+    span {
+      margin-right: 100px;
+      display: block;
+    }
+  }
+`

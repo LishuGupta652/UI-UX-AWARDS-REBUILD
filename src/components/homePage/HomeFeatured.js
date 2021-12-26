@@ -14,7 +14,7 @@ const HomeFeatured = () => {
       <Container>
         <Link>
           <FeaturedContent>
-            <Flex>
+            <Flex spaceBetween>
               <h3>Featured Project</h3>
               <div className="meta">
                 <h4>PEI SeaFood</h4>
