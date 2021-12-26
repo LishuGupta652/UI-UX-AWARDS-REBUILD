@@ -49,3 +49,9 @@ export const Content = styled.h2`
   margin-left: 124px;
   color: ${props => props.theme.text};
 `
+
+// HOME FEATURED
+export const HomeFeaturedSection = styled.div``
+export const FeaturedContent = styled.div``
+export const FeaturedVideo = styled.div``
+export const FeaturedProjects = styled.div``
