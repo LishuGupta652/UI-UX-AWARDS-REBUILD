@@ -1,6 +1,7 @@
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import { useInView } from "react-intersection-observer"
 import { Container, Flex } from "../../styles/globalStyles"
 import {
   FeaturedContent,
