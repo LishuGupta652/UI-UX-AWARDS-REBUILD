@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import { Container, Flex } from "../../styles/globalStyles"
 import {
   FeaturedContent,
@@ -9,11 +9,14 @@ import {
 } from "../../styles/homeStyles"
 
 const HomeFeatured = ({ onCursor }) => {
+  const [hovered, setHovered] = useState(false)
   return (
     <HomeFeaturedSection>
       <Container>
         <Link>
           <FeaturedContent
+            onHoverStart={() => setHovered(!hovered)}
+            onHoverEnd={() => setHovered(!hovered)}
             onMouseEnter={() => onCursor("hovered")}
             onMouseLeave={onCursor}
           >
