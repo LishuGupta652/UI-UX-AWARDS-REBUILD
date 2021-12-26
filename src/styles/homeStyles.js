@@ -134,5 +134,24 @@ export const FeaturedProjects = styled.div`
       margin-right: 100px;
       display: block;
     }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 35px;
+      height: 7px;
+      display: block;
+      background: #fff;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      margin-top: -8px;
+    }
+    &:after {
+      margin-top: 8px;
+    }
   }
 `
