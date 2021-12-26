@@ -24,7 +24,7 @@ const HomeFeatured = ({ onCursor }) => {
             <Flex spaceBetween>
               <h3>Featured Project</h3>
               <motion.div
-                animate={{ x: hovered ? 48 : 0 }}
+                animate={{ opacity: hovered ? 1 : 0 }}
                 transition={{ duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }}
                 className="meta"
               >
