@@ -1,5 +1,5 @@
 import { useAnimation } from "framer-motion"
-import React from "react"
+import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { Container } from "../../styles/globalStyles"
 import { Content, HomeContentSection } from "../../styles/homeStyles"
@@ -10,6 +10,13 @@ const HomeContent = () => {
     triggerOnce: true,
     // rootMargin: "-300px",
   })
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible")
+    }
+  }, [animation, inView])
+
   return (
     <HomeContentSection
       ref={contentRef}
