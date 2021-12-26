@@ -1,8 +1,15 @@
+import { useAnimation } from "framer-motion"
 import React from "react"
+import { useInView } from "react-intersection-observer"
 import { Container } from "../../styles/globalStyles"
 import { Content, HomeContentSection } from "../../styles/homeStyles"
 
 const HomeContent = () => {
+  const animation = useAnimation()
+  const [contentRef, inView] = useInView({
+    triggerOnce: true,
+    // rootMargin: "-300px",
+  })
   return (
     <HomeContentSection>
       <Container>
