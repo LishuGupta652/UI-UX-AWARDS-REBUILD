@@ -16,6 +16,7 @@ import {
 import { useGlobalStateContext } from "../../context/globalContext"
 //Scroll Observer
 import { useInView } from "react-intersection-observer"
+import Accordion from "./Accordion"
 
 // Accordion Data
 const accordionIds = [
