@@ -1,5 +1,12 @@
+import { Link } from "gatsby"
 import React from "react"
 import { Container, Flex } from "../../styles/globalStyles"
+import {
+  FeaturedContent,
+  FeaturedProjects,
+  FeaturedVideo,
+  HomeFeaturedSection,
+} from "../../styles/homeStyles"
 
 const HomeFeatured = () => {
   return (
