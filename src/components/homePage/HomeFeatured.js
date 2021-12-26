@@ -15,7 +15,7 @@ const HomeFeatured = ({ onCursor }) => {
 
   const animation = useAnimation()
   const [featuredRef, inView] = useInView({
-    rootMargin: "-300px",
+    rootMargin: "-500px",
   })
 
   useEffect(() => {
