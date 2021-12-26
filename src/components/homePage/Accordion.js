@@ -1,4 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
+import {
+  AccordionContent,
+  AccordionHeader,
+  AccordionIcon,
+} from "../../styles/homeStyles"
 
 const Accordion = props => {
   console.log(props)
