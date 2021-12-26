@@ -14,7 +14,7 @@ const HomeFeatured = ({ onCursor }) => {
   const [hovered, setHovered] = useState(false)
 
   const animation = useAnimation()
-  const [contentRef, inView] = useInView({
+  const [featuredRef, inView] = useInView({
     rootMargin: "-300px",
   })
 
@@ -25,7 +25,7 @@ const HomeFeatured = ({ onCursor }) => {
   }, [animation, inView])
 
   return (
-    <HomeFeaturedSection>
+    <HomeFeaturedSection ref={featuredRef}>
       <Container>
         <Link>
           <FeaturedContent
