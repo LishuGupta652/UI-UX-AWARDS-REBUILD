@@ -108,5 +108,13 @@ export const FeaturedContent = styled.div`
     }
   }
 `
-export const FeaturedVideo = styled.div``
+export const FeaturedVideo = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 480px;
+  top: 0;
+  display: block;
+  overflow: hidden;
+`
 export const FeaturedProjects = styled.div``
