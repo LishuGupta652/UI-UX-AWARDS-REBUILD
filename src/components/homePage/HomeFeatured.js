@@ -23,10 +23,14 @@ const HomeFeatured = ({ onCursor }) => {
           >
             <Flex spaceBetween>
               <h3>Featured Project</h3>
-              <div className="meta">
+              <motion.div
+                animate={{ x: hovered ? 48 : 0 }}
+                transition={{ duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }}
+                className="meta"
+              >
                 <h4>PEI SeaFood</h4>
                 <h4>2019</h4>
-              </div>
+              </motion.div>
             </Flex>
             <h2 className="featured-title">
               NOT <br />
