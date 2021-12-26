@@ -11,6 +11,18 @@ import {
 
 const HomeFeatured = ({ onCursor }) => {
   const [hovered, setHovered] = useState(false)
+
+  const animation = useAnimation()
+  const [contentRef, inView] = useInView({
+    rootMargin: "-300px",
+  })
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible")
+    }
+  }, [animation, inView])
+
   return (
     <HomeFeaturedSection>
       <Container>
