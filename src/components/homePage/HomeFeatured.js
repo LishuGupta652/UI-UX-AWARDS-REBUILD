@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import { Container, Flex } from "../../styles/globalStyles"
