@@ -39,5 +39,13 @@ export const Headline = styled(motion.span)`
 `
 
 // homecontent
-export const HomeContentSection = styled.div``
-export const Content = styled.h2``
+export const HomeContentSection = styled.div`
+  margin-bottom: 200px;
+`
+export const Content = styled.h2`
+  width: 53%;
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-left: 124px;
+  color: ${props => props.theme.text};
+`
