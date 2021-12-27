@@ -51,11 +51,15 @@ const Layout = ({ children }) => {
     background: "#000",
     text: "#fff",
     red: "#ea291e",
+    left: `${hamburgerPosition.x}px`,
+    top: `${hamburgerPosition.y}px`,
   }
   const lightTheme = {
     background: "#fff",
     text: "#000",
     red: "#ea291e",
+    left: `${hamburgerPosition.x}px`,
+    top: `${hamburgerPosition.y}px`,
   }
 
   const { currentTheme, cursorStyles } = useGlobalState()

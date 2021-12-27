@@ -30,7 +30,7 @@ const Header = ({
 
   const MenuHover = () => {
     onCursor("locked")
-    setHamburgerPosition({ x: position.x, y: position.y })
+    setHamburgerPosition({ x: position.x, y: position.y + 72 })
   }
 
   useEffect(() => {

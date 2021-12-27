@@ -87,4 +87,12 @@ export const Cursor = styled.div`
     width: 56px;
     height: 56px;
   }
+  &.locked {
+    background: transparent !important;
+    width: 56px;
+    height: 56px;
+    border: 4px solid ${props => props.theme.red};
+    top: ${props => props.theme.top} !important;
+    left: ${props => props.theme.left} !important;
+  }
 `
