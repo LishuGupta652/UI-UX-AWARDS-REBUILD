@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { Link } from "gatsby"
 import React from "react"
-import { FooterContent } from "../styles/footerStyles"
+import { FooterContent, FooterSocial } from "../styles/footerStyles"
 import { Container, Flex } from "../styles/globalStyles"
 import {
   CloseNav,
@@ -136,6 +136,32 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   <FooterContent>
                     <p>810.98.68.534</p>
                   </FooterContent>
+                  <FooterSocial>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="/"
+                      target="_blank"
+                    >
+                      <Instagram />
+                    </a>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="/"
+                      target="_blank"
+                    >
+                      <Facebook />
+                    </a>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="/"
+                      target="_blank"
+                    >
+                      <Vimeo />
+                    </a>
+                  </FooterSocial>
                 </Flex>
               </NavFooter>
               <NavVideos>
