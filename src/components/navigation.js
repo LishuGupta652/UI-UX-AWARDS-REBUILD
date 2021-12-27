@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { Link } from "gatsby"
 import React from "react"
+import { FooterContent } from "../styles/footerStyles"
 import { Container, Flex } from "../styles/globalStyles"
 import {
   CloseNav,
@@ -126,7 +127,17 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   ))}
                 </ul>
               </NavList>
-              <NavFooter></NavFooter>
+
+              <NavFooter>
+                <Flex spaceBetween>
+                  <FooterContent>
+                    <p>lishugupta652@gmail.com</p>
+                  </FooterContent>
+                  <FooterContent>
+                    <p>810.98.68.534</p>
+                  </FooterContent>
+                </Flex>
+              </NavFooter>
               <NavVideos>
                 <motion.div
                   animate={{ width: revealVideo.show ? 0 : "100%" }}
