@@ -57,12 +57,12 @@ const Footer = ({ setHamburgerPosition, onCursor }) => {
       <Container>
         <Flex spaceBetween>
           <FooterContent>
-            <p>902.315.1279</p>
-            <p>info@furrow.studio</p>
+            <p>810.98.68.534</p>
+            <p>lishugupta652@gmail.com</p>
           </FooterContent>
           <FooterContent wider>
-            <p>15 Camburhill Ct Unit C</p>
-            <p>Charlottetown, PE C1E 0E2</p>
+            <p>Indore MP</p>
+            <p>gitman: lishu.ml</p>
           </FooterContent>
           <FooterSocial>
             <a
