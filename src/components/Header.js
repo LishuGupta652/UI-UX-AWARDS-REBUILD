@@ -1,13 +1,25 @@
 import { Link } from "gatsby"
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import { Container, Flex } from "../styles/globalStyles"
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
 // Context
 import { useGlobalState, useGlobalDispatch } from "../context/globalContext"
+import useElementPosition from "../context/useElementPosition"
 
-const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
+// Custom Hook
+
+const Header = ({
+  onCursor,
+  toggleMenu,
+  setToggleMenu,
+  hamburgerPosition,
+  setHamburgerPosition,
+}) => {
   const dispatch = useGlobalDispatch()
   const { currentTheme } = useGlobalState()
+  const hamburger = useRef()
+  const position = useElementPosition(hamburger)
+
   const toggleTheme = () => {
     if (currentTheme === "dark") {
       dispatch({ type: "TOGGLE_THEME", theme: "light" })
@@ -46,7 +58,7 @@ const Header = ({ onCursor, toggleMenu, setToggleMenu }) => {
               N
             </Link>
           </Logo>
-          <Menu onClick={() => setToggleMenu(!toggleMenu)}>
+          <Menu ref={hamburger} onClick={() => setToggleMenu(!toggleMenu)}>
             <button>
               <span></span>
               <span></span>
