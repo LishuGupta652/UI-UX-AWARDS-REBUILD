@@ -28,6 +28,11 @@ const Header = ({
     }
   }
 
+  const MenuHover = () => {
+    onCursor("locked")
+    setHamburgerPosition({ x: position.x, y: position.y })
+  }
+
   useEffect(() => {
     window.localStorage.setItem("theme", currentTheme)
   }, [currentTheme])
@@ -58,7 +63,12 @@ const Header = ({
               N
             </Link>
           </Logo>
-          <Menu ref={hamburger} onClick={() => setToggleMenu(!toggleMenu)}>
+          <Menu
+            ref={hamburger}
+            onClick={() => setToggleMenu(!toggleMenu)}
+            onMouseEnter={menuHover}
+            onMouseLeave={onCursor}
+          >
             <button>
               <span></span>
               <span></span>
