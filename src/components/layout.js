@@ -9,6 +9,7 @@ import Header from "./Header"
 import { useGlobalDispatch, useGlobalState } from "../context/globalContext"
 import CustomCursor from "./customCurson"
 import Navigation from "./navigation"
+import Footer from "./footer"
 
 const GlobalStyle = createGlobalStyle`
 ${Normalize}
@@ -89,6 +90,7 @@ const Layout = ({ children }) => {
         onCursor={onCursor}
       />
       <main>{children}</main>
+      <Footer />
     </ThemeProvider>
   )
 }
