@@ -66,7 +66,7 @@ const Header = ({
           <Menu
             ref={hamburger}
             onClick={() => setToggleMenu(!toggleMenu)}
-            onMouseEnter={menuHover}
+            onMouseEnter={MenuHover}
             onMouseLeave={onCursor}
           >
             <button>
