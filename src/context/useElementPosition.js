@@ -22,6 +22,10 @@ export default function useElementPosition(el) {
         element.getBoundingClientRect().top +
         document.documentElement.scrollTop +
         element.offsetHeight / 2
+      setElementPosition(getElement(x, y))
     }
-  })
+
+    handlePosition()
+  }, [el])
+  return elementPosition
 }
