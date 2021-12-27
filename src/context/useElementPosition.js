@@ -20,8 +20,8 @@ export default function useElementPosition(el) {
         element.offsetWidth / 2
       let y =
         element.getBoundingClientRect().top +
-        document.documentElement.scrollLeft +
-        element.offsetWidth / 2
+        document.documentElement.scrollTop +
+        element.offsetHeight / 2
     }
   })
 }
