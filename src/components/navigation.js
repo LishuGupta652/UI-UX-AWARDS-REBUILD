@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { Link } from "gatsby"
 import React from "react"
+import { Facebook, Instagram, Vimeo } from "../assets/svg/social-icons"
 import { FooterContent, FooterSocial } from "../styles/footerStyles"
 import { Container, Flex } from "../styles/globalStyles"
 import {
