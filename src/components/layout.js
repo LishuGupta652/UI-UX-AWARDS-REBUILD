@@ -90,7 +90,11 @@ const Layout = ({ children }) => {
         onCursor={onCursor}
       />
       <main>{children}</main>
-      <Footer />
+      <Footer
+        onCursor={onCursor}
+        hamburgerPosition={hamburgerPosition}
+        setHamburgerPosition={setHamburgerPosition}
+      />
     </ThemeProvider>
   )
 }
